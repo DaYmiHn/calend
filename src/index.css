@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;900&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  background-color: #050505; /* Matches the bg-[#050505] in the component */
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  filter: invert(1) sepia(1) saturate(5) hue-rotate(240deg);
+  cursor: pointer;
+}
+
+.color-scheme-dark {
+  color-scheme: dark;
+}
+
+/* Анимации */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.animate-in {
+  animation: fadeIn 0.2s ease-out forwards;
+}
+
+/* React Datepicker Custom Dark Neon Styles */
+.dark-neon-datepicker {
+  background-color: #0f0f12 !important;
+  border: 1px solid rgba(168, 85, 247, 0.3) !important;
+  font-family: 'Inter', sans-serif !important;
+  color: #faf5ff !important;
+  border-radius: 1rem !important;
+  overflow: hidden;
+  box-shadow: 0 0 50px rgba(0,0,0,0.8) !important;
+}
+
+.dark-neon-datepicker .react-datepicker__header {
+  background-color: rgba(88, 28, 135, 0.2) !important;
+  border-bottom: 1px solid rgba(168, 85, 247, 0.2) !important;
+}
+
+.dark-neon-datepicker .react-datepicker__current-month,
+.dark-neon-datepicker .react-datepicker-time__header,
+.dark-neon-datepicker .react-datepicker-year-header {
+  color: #d8b4fe !important;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+}
+
+.dark-neon-datepicker .react-datepicker__day-name {
+  color: rgba(168, 85, 247, 0.6) !important;
+  font-weight: bold;
+}
+
+.dark-neon-datepicker .react-datepicker__day {
+  color: #faf5ff !important;
+}
+
+.dark-neon-datepicker .react-datepicker__day:hover {
+  background-color: rgba(168, 85, 247, 0.2) !important;
+  border-radius: 0.5rem;
+}
+
+.dark-neon-datepicker .react-datepicker__day--selected,
+.dark-neon-datepicker .react-datepicker__day--keyboard-selected {
+  background-color: #9333ea !important;
+  color: white !important;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 15px rgba(147, 51, 234, 0.5);
+}
+
+.dark-neon-datepicker .react-datepicker__day--disabled {
+  color: #4b5563 !important;
+}
+
+.dark-neon-datepicker .react-datepicker__navigation-icon::before {
+  border-color: #a855f7 !important;
+}
